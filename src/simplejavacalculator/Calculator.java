@@ -22,7 +22,7 @@ public class Calculator {
         normal, add, minus, multiply, divide , xpowerofy 
     }
 
-    public enum MonoOperatorModes {
+    public enum MfOperatorModes {
         square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs, ln,
     }
 
@@ -84,23 +84,23 @@ public class Calculator {
     }
 
     
-    public Double calculateMono(MonoOperatorModes newMode, Double num) {
-        if (newMode == MonoOperatorModes.square) {
+    public Double calculateMono(MfOperatorModes newMode, Double num) {
+        if (newMode == MfOperatorModes.square) {
             return num * num;
         }
-        if (newMode == MonoOperatorModes.squareRoot) {
+        if (newMode == MfOperatorModes.squareRoot) {
             return Math.sqrt(num);
         }
-        if (newMode == MonoOperatorModes.oneDividedBy) {
+        if (newMode == MfOperatorModes.oneDividedBy) {
             return 1 / num;
         }
-        if (newMode == MonoOperatorModes.cos) {
+        if (newMode == MfOperatorModes.cos) {
             return Math.cos(Math.toRadians(num));
         }
-        if (newMode == MonoOperatorModes.sin) {
+        if (newMode == MfOperatorModes.sin) {
             return Math.sin(Math.toRadians(num));
         }
-        if (newMode == MonoOperatorModes.tan) {
+        if (newMode == MfOperatorModes.tan) {
             if (num == 0 || num % 180 == 0) {
                 return 0.0;
             }
@@ -110,16 +110,16 @@ public class Calculator {
 
             return Math.tan(Math.toRadians(num));
         }
-        if (newMode == MonoOperatorModes.log) {
+        if (newMode == MfOperatorModes.log) {
             return log10(num);
         }
-        if (newMode == MonoOperatorModes.ln) {
+        if (newMode == MfOperatorModes.ln) {
             return log(num);
         }
-        if (newMode == MonoOperatorModes.rate) {
+        if (newMode == MfOperatorModes.rate) {
            return num / 100;
         }
-        if (newMode == MonoOperatorModes.abs){
+        if (newMode == MfOperatorModes.abs){
             return Math.abs(num);
         }
 
